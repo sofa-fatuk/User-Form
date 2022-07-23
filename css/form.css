@@ -1,0 +1,54 @@
+.form {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #c3c3c3;
+}
+
+.form__section {
+  position: relative;
+  padding: 0px 35px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.form__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: #c3c3c3;
+}
+
+.form__section:first-of-type {
+  padding-top: 30px;
+}
+
+.form__section:last-of-type {
+  margin-bottom: 0;
+}
+
+.form__row {
+  padding: 15px 0 15px 0;
+}
+
+.form__subtitle {
+  letter-spacing: 0.5px;
+  margin: 0;
+  max-width: 450px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.form__text {
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: #8f8c8c;
+  line-height: 18px;
+  max-width: 452px;
+}

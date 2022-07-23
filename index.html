@@ -1,38 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>user-form</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/input.css">
+  <link rel="stylesheet" href="css/textarea.css">
+  <link rel="stylesheet" href="css/range.css">
+  <link rel="stylesheet" href="css/button.css">
 </head>
+
 <body>
-  <div class="formPage">
-    <div class="container">
-      <div class="form-box info">
-      <div class="form__line info"></div>
-        <form class="form" action="">
-          <div class="form__input">
-            <input class="form__text" id="name" type="text" required="required">
-            <label class="form__label" for="name">Имя</label>
-          </div>
-          <div class="form__input">
-            <input class="form__text" id="nick" type="text" required="required">
-            <label class="form__label" for="nick">Ник в Telegram</label>
-          </div>
-          <div class="form__input">
-            <input class="form__text" id="link" type="text" required="required">
-            <label class="form__label" for="link">Ссылка на репозиторий этого задания</label>
-          </div>
-          <div class="form__input">
-            <input class="form__text" id="preferences" type="text" required="required">
-            <label class="form__label" for="preferences">Что вы точно не хотите делать в работе, что вы делаете с неохотой?</label>
-          </div>
-        </form>
-      </div>
-    </div>
+  <div class="form">
+    <form>
+      <section class="form__section">
+        <div class="form__row">
+          <label class="input">
+            <input class="input__field" type="text" required="required">
+            <span class="input__text">Имя</span>
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="input">
+            <input class="input__field" type="text" required="required">
+            <span class="input__text">Ник в Telegram</span>
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="input">
+            <input class="input__field" type="text" required="required">
+            <span class="input__text">Ссылка на репозиторий этого задания</span>
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="textarea">
+            <textarea type="text" class="textarea__field textarea__field-big" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text">Что вы точно не хотите делать в работе, что вы делаете с неохотой?</span>
+          </label>
+        </div>
+      </section>
+      <section class="form__section">
+        <div class="form__row">
+          <h3 class="form__subtitle">Как вы оцениваете свою способность взаимодействовать с дизайном?</h2>
+            <p class="form__text">А именно, работу с векторами, внимательность к деталям, возможность проявить
+              инициативу
+              - например, можете ли сверстать макет адаптируя его для мобильных устройств с макета под десктоп?</p>
+        </div>
+        <div class="form__row">
+          <label class="range">
+            <span class="range__bar"><span id="range-fill" class="range__fill"></span></span>
+            <input class="range__track" id="range" type="range" min="0" max="100" value="0"
+              oninput="onRangeChange(this)">
+            <div class="range__percent">
+              <span>0</span>
+              <span>100%</span>
+            </div>
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="textarea">
+            <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text">Ваш комментарий (по желанию)</span>
+          </label>
+        </div>
+      </section>
+      <section class="form__section">
+        <div class="form__row">
+          <h3 class="form__subtitle">Готовы ли работать с CSS анимацией?</h2>
+            <p class="form__text">Часто нужна несложная CSS анимация без сторонних библиотек для сопровождения
+              какого-либо действия или плавной подачи информации, но без фанатизма ))
+            </p>
+        </div>
+        <div class="form__row">
+          <label class="range">
+            <span class="range__bar"><span id="range-fill" class="range__fill"></span></span>
+            <input class="range__track" id="range" type="range" min="0" max="100" value="0"
+              oninput="onRangeChange(this)">
+            <div class="range__percent">
+              <span>0</span>
+              <span>100%</span>
+            </div>
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="textarea">
+            <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text">Ваш комментарий (по желанию)</span>
+          </label>
+        </div>
+      </section>
+      <section class="form__section">
+        <div class="form__row">
+          <label class="textarea">
+            <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text">Как вы относитесь к рутинной работе?</span>
+          </label>
+          <!-- <p class="form__text">
+            Бывают задачи интересные, а бывает, к примеру, нужно добавить на сайт пару новых языков в режиме copy/paste
+            в файл локализации или помочь опубликовать пост в блоге - md файл из Гугл документа
+          </p> -->
+        </div>
+      </section>
+      <section class="form__section">
+        <div class="form__row">
+          <label class="textarea">
+            <textarea type="text" class="textarea__field textarea__field-big" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text">Готовы ли посвятить все 100% своего времени на работу с нашими задачами, не
+              отвлекаясь на стороннюю разработку?</span>
+          </label>
+        </div>
+      </section>
+      <button class="button">Отправить</button>
+    </form>
   </div>
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,44 @@
+.textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.textarea__field {
+  font-family: Arial;
+  resize: none;
+  overflow: hidden;
+  height: 24px;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #898989;
+}
+
+/* Временное */
+.textarea__field-big {
+  height: 36px;
+  padding-bottom: 46px;
+}
+
+.textarea__field:focus ~ .textarea__text,
+.textarea__field:valid ~ .textarea__text {
+  transform: translateY(-80%) scale(.8);
+}
+
+.textarea__text {
+  position: absolute;
+  color: rgb(0, 234, 255);
+  font-weight: 500; 
+  left: 0;
+  top: 0;
+  line-height: 21px;
+  max-width: 420px;
+  transform-origin: left top;
+  transition: transform .2s ease;
+}
+
+/* Спросить про display: inline-block; у textarea__field, и что делать если длинная строка и не хочется оттодвигать*/

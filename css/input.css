@@ -1,0 +1,39 @@
+.input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.input__field {
+  width: 100%;
+  max-width: 600px;
+  padding: 3px 0;
+  display: flex;
+  flex-direction: column;
+  background: none; 
+  appearance: none;
+  color: #131313;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #898989;
+}
+
+.input__text {
+  position: absolute;
+  color: rgb(0, 234, 255);
+  font-weight: 500;
+  opacity: .8;
+  left: 0;
+  top: 0;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 530px;
+  transform-origin: left top;
+  transition: transform .2s ease;
+}
+
+.input__field:focus ~ .input__text,
+.input__field:valid ~ .input__text {
+  transform: translateY(-80%) scale(.8);
+}
