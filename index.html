@@ -38,7 +38,7 @@
         </div>
         <div class="form__row">
           <label class="textarea">
-            <textarea type="text" class="textarea__field textarea__field-big" required="required" oninput="auto_grow(this)"></textarea>
+            <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
             <span class="textarea__text">Что вы точно не хотите делать в работе, что вы делаете с неохотой?</span>
           </label>
         </div>
@@ -50,14 +50,24 @@
               инициативу
               - например, можете ли сверстать макет адаптируя его для мобильных устройств с макета под десктоп?</p>
         </div>
-        <div class="form__row">
+        <div class="form__row form__row-range">
           <label class="range">
-            <span class="range__bar"><span id="range-fill" class="range__fill"></span></span>
-            <input class="range__track" id="range" type="range" min="0" max="100" value="0"
-              oninput="onRangeChange(this)">
+            <span class="range__bar">
+              <span id="question-design-range-fill" class="range__fill"></span>
+            </span>
+            <input
+              class="range__track"
+              id="question-design-range"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              oninput="onRangeChange(this)"
+            >
+            <div class="range__value" id="question-design-range-value"></div>
             <div class="range__percent">
-              <span>0</span>
-              <span>100%</span>
+              <span id="question-design-range-min" class="range__value-min" >0</span>
+              <span id="question-design-range-max" class="range__value-max">100%</span>
             </div>
           </label>
         </div>
@@ -75,14 +85,23 @@
               какого-либо действия или плавной подачи информации, но без фанатизма ))
             </p>
         </div>
-        <div class="form__row">
+        <div class="form__row form__row-range">
           <label class="range">
-            <span class="range__bar"><span id="range-fill" class="range__fill"></span></span>
-            <input class="range__track" id="range" type="range" min="0" max="100" value="0"
+            <span class="range__bar">
+              <span id="question-animation-range-fill" class="range__fill"></span>
+            </span>
+            <input 
+              class="range__track" 
+              id="question-animation-range" 
+              type="range" 
+              min="0" 
+              max="100" 
+              value="0"
               oninput="onRangeChange(this)">
+            <div class="range__value" id="question-animation-range-value"></div>
             <div class="range__percent">
-              <span>0</span>
-              <span>100%</span>
+              <span id="question-animation-range-min" class="range__value-min" >0</span>
+              <span id="question-animation-range-max" class="range__value-max">100%</span>
             </div>
           </label>
         </div>
@@ -99,17 +118,13 @@
             <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
             <span class="textarea__text">Как вы относитесь к рутинной работе?</span>
           </label>
-          <!-- <p class="form__text">
-            Бывают задачи интересные, а бывает, к примеру, нужно добавить на сайт пару новых языков в режиме copy/paste
-            в файл локализации или помочь опубликовать пост в блоге - md файл из Гугл документа
-          </p> -->
         </div>
       </section>
       <section class="form__section">
         <div class="form__row">
           <label class="textarea">
-            <textarea type="text" class="textarea__field textarea__field-big" required="required" oninput="auto_grow(this)"></textarea>
-            <span class="textarea__text">Готовы ли посвятить все 100% своего времени на работу с нашими задачами, не
+            <textarea type="text" class="textarea__field" required="required" oninput="auto_grow(this)"></textarea>
+            <span class="textarea__text textarea__text__default">Готовы ли посвятить все 100% своего времени на работу с нашими задачами, не
               отвлекаясь на стороннюю разработку?</span>
           </label>
         </div>
