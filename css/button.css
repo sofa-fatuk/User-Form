@@ -8,3 +8,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.button_valid {
+  background: green;
+}
+
+.button_filled {
+  background: rgb(0, 234, 255);
+}

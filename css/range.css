@@ -63,7 +63,7 @@
   padding: 10px 0;
 }
 
-.range__value-left,
+.range__value-min,
 .range__value-max {
   color: rgb(0, 234, 255);
 }

@@ -41,3 +41,16 @@
 .textarea__field:valid ~ .textarea__text__default {
   transform: translateY(-25%) scale(.9);
 }
+
+.textarea__field:focus ~ .input__text__invalid,
+.textarea__field:valid ~ .input__text__invalid {
+  display: none;
+}
+
+.input__field_invalid.textarea__field {
+  border-bottom: 1px solid red;
+}
+
+.input__field_invalid ~ .input__text__invalid {
+  display: block;
+}

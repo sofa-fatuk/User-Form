@@ -37,3 +37,27 @@
 .input__field:valid ~ .input__text {
   transform: translateY(-80%) scale(.8);
 }
+
+.input__text__invalid {
+  color: red;
+  position: absolute;
+  top: -20px;
+  display: none;
+}
+
+.input__field:focus ~ .input__text__invalid,
+.input__field:valid ~ .input__text__invalid {
+  display: none;
+}
+
+.input__field_invalid.input__field {
+  border-bottom: 1px solid red;
+}
+
+.input__field_invalid ~ .input__text__invalid {
+  display: block;
+}
+
+.input__text__invalid_gap {
+  top: -45px;
+}

@@ -20,7 +20,7 @@
   left: 0;
   height: 100%;
   width: 3px;
-  background: #c3c3c3;
+  background: var(--background);
 }
 
 .form__section:first-of-type {
@@ -36,7 +36,6 @@
   padding: 15px 0 15px 0;
 }
 
-/* временное */
 .form__row-range {
   padding: 0;
 }
@@ -68,3 +67,7 @@
   color: rgb(123, 192, 44);
   color: rgb(255, 0, 81);
 } */
+
+.form__row_gap {
+  padding-top: 30px;
+}
