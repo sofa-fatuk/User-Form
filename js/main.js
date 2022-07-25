@@ -59,6 +59,7 @@ const sectionAnimationElement = document.getElementById('section-animation')
 const sectionRoutineElement = document.getElementById('section-routine-job')
 const sectionWillingnessElement = document.getElementById('section-willingness-job')
 const submitButton = document.getElementById('button')
+const submitButtonText = document.getElementById('submit-button-text')
 
 const inputElements = document.querySelectorAll('input')
 const textAreasElements = document.querySelectorAll('textarea')
@@ -171,11 +172,12 @@ function onSubmit() {
   if (allFormValid) {
     submitButton.classList.remove('button_filled')
     submitButton.classList.add('button_valid')
-    sectionAboutElement.style.setProperty('--background', 'green')
-    sectionDesignElement.style.setProperty('--background', 'green')
-    sectionAnimationElement.style.setProperty('--background', 'green')
-    sectionRoutineElement.style.setProperty('--background', 'green')
-    sectionWillingnessElement.style.setProperty('--background', 'green')
+    submitButtonText.innerHTML = "Отправлено"
+    sectionAboutElement.style.setProperty('--background', 'rgb(123, 192, 44)')
+    sectionDesignElement.style.setProperty('--background', 'rgb(123, 192, 44)')
+    sectionAnimationElement.style.setProperty('--background', 'rgb(123, 192, 44)')
+    sectionRoutineElement.style.setProperty('--background', 'rgb(123, 192, 44)')
+    sectionWillingnessElement.style.setProperty('--background', 'rgb(123, 192, 44)')
   } else {
     submitButton.classList.remove('button_valid')
   }

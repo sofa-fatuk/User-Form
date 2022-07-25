@@ -10,9 +10,17 @@
 }
 
 .button_valid {
-  background: green;
+  background: rgb(123, 192, 44);
 }
 
 .button_filled {
   background: rgb(0, 234, 255);
+}
+
+.img__check {
+  display: none;
+}
+
+.button_valid > .img__check {
+  display: inline;
 }
